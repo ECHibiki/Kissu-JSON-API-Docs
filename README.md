@@ -2,6 +2,39 @@
 JSON API documentation for kissu.moe. This file contains information on both JSON created for the Kissu-UI (done on the Hazuki API engine) and the Vichan-UI. Documentation provides a link to an example file and then explains the information within. Information within could be changed at any time.
 
 ## Kissu-UI / Hazuki API Style
+### /api/properties/banners.json
+https://kissu.moe/api/properties/banners.json <br/>
+A list of all the banners submitted to banners.kissu.moe.
+- ARRAY :: Array containing all the banners
+  - STRING url :: The URL which clicking on the image goes to. Ignorable on small banners.
+  - STRING uri :: The URI to display the image.
+  - STRING name :: The username of the image creator.
+  - STRING size :: The size of the banner (small, wide).
+  - INT clicks :: The number of clicks on the banner. Ignorable on small banners.
+  - STRING board :: If the banner was created to only be displayed on certain boards, then this field will contain said board
+
+### /api/properties/site.json
+https://kissu.moe/api/properties/site.json <br/>
+A list of information about the website.
+- BOARD-ARRAY boards :: An array of public boards.
+  - STRING name :: The name of the board.
+  - STRING title :: The title of the board.
+  - STRING topic :: The topic associated with the the board.
+  - STRING category :: The categorization used for grouping the board with others.
+- FRIENDS-ARRAY friends :: An array of websites associated with the imageboard.
+  - STRING name :: The name of the partner.
+  - STRING descrption :: How to describe this partner.
+  - STRING media :: A thumbnail that describes this partner.
+  - STRING url :: THe url which this partner site can be accessed with.
+- NEWS-DETAILS news :: Details of website news.
+  -  STRING message :: The news message.
+  -  STRING href :: A URL that clicking on the site logo will go to.
+  -  INT updated_at :: A unix timestamp of when the news was last updated.
+- STATS-DETAILS stats :: A basic summary of website statistics.
+  - STRING posts :: The number of posts on the website.
+  - STRING unique :: The number of unique posts on the website.
+  - STRING data :: A value representing the amount of website data stored only on the API server.
+
 ### /api/properties/{BOARD: [a-zA-Z]+}.json
 https://kissu.moe/api/properties/b.json<br/>
 Information about the given board is stored in the properties folder.
