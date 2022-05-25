@@ -27,6 +27,17 @@ Information about the given board is stored in the properties folder.
   - INT deleted :: If this post was deleted this value is 1, otherwise 0.
 - INT thread_count :: The number of threads on the board.
 
+## /api/threads/summary.json
+https://kissu.moe/api/threads/summary.json? <br/>
+A list of the most recently added posts to the website. Only contains posts from the public boards.
+- SUMMARY-ARRAY recent :: The list of recent posts.
+  -  INT no :: The number of the post.
+  -  INT resto :: The number of the thread this post belongs to.
+  -  STRING com :: The text which identifies the most recent post. Can be a filename or a plaintext snippet of the comment.
+  -  INT time :: The time it was posted.
+  -  STRING board :: The board this post belongs to.
+  -  STRING-ARRAY cites :: A list of the board+number of posts this given post is referencing. Format of "[a-z]+\-[0-9]+" for example: "qa-4165".
+
 ### /api/threads/{BOARD: [a-zA-Z]+}/catalog/{PAGE: [1-9]+ OR full}.json
 https://kissu.moe/api/threads/b/catalog/full.json <br/>
 Information about the given catalog is stored in partial forms on pages or the full form. The partial is split up into chunks of 60 threads each.
