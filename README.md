@@ -35,6 +35,54 @@ A list of information about the website.
   - STRING unique :: The number of unique posts on the website.
   - STRING data :: A value representing the amount of website data stored only on the API server.
 
+### /api/properties/error.json
+https://kissu.moe/api/properties/error.json <br/>
+Very simple page for the error page information.
+- BANNER-ITEMS banner :: Contains banner objects representing the page's current banner.
+  - BANNER-ITEM size :: Values of "small" or "wide" contain information about the given banner.
+    - STRING url :: The URL which clicking on the image goes to. Ignorable on small banners.
+    - STRING uri :: The URI to display the image.
+    - STRING name :: The username of the image creator.
+    - STRING size :: The size of the banner (small, wide).
+    - INT clicks :: The number of clicks on the banner. Ignorable on small banners.
+    - STRING board :: If the banner was created to only be displayed on certain boards, then this field will contain said board
+- STRING title :: The page title which this file belongs to.
+- STRING title_descriptor :: The description of the page which this file belongs to.
+
+### /api/properties/home.json
+https://kissu.moe/api/properties/home.json <br/>
+Contains information on the home page.
+- BANNER-ITEMS banner :: Contains banner objects representing the page's current banner.
+  - BANNER-ITEM size :: Values of "small" or "wide" contain information about the given banner.
+    - STRING url :: The URL which clicking on the image goes to. Ignorable on small banners.
+    - STRING uri :: The URI to display the image.
+    - STRING name :: The username of the image creator.
+    - STRING size :: The size of the banner (small, wide).
+    - INT clicks :: The number of clicks on the banner. Ignorable on small banners.
+    - STRING board :: If the banner was created to only be displayed on certain boards, then this field will contain said board
+- ACTIVE-ARRAY active :: A lsit of active threads on the website.
+  - INT no :: The number of the post
+  - STRING com :: The text identifying the thread. Could be a filename or a plaintext snippet of the comment.
+  - STRING file_id :: A string representing how the thumbnail is stored.
+  - EMBED-OBJECT embed :: If there's an embed this will contain the information on it.
+    - STRING site :: What site does the embed belong to.
+    - STRING code :: What code is the file stored with.
+    - STRING inputURL :: What was the URL which the poster used to post the embed.
+    - STRING time :: The second at which the video is supposed to start.
+  - STRING board :: The thread's board.
+- FEATURED-ARRAY featured :: A list of threads that have been deemed high quality by the staff.
+  - INT no :: The number of the post
+  - STRING com :: The text identifying the thread. Could be a filename or a plaintext snippet of the comment.
+  - STRING file_id :: A string representing how the thumbnail is stored.
+  - EMBED-OBJECT embed :: If there's an embed this will contain the information on it.
+    - STRING site :: What site does the embed belong to.
+    - STRING code :: What code is the file stored with.
+    - STRING inputURL :: What was the URL which the poster used to post the embed.
+    - STRING time :: The second at which the video is supposed to start.
+  - STRING board :: The thread's board.
+- STRING title :: The page title which this file belongs to.
+- STRING title_descriptor :: The description of the page which this file belongs to.
+
 ### /api/properties/{BOARD: [a-zA-Z]+}.json
 https://kissu.moe/api/properties/b.json<br/>
 Information about the given board is stored in the properties folder.
