@@ -209,3 +209,5 @@ Information about the given thread is stored in partial forms on pages or the fu
         - STRING time :: The second at which the video is supposed to start.
 
 ## Vichan-UI / Vichan API Style
+Most of this can be found on https://github.com/vichan-devel/vichan-API/ <br/>
+Kissu has made minimal to no modifications on the vichan API. Please bring up any differences if they exist and are causing confusion.
