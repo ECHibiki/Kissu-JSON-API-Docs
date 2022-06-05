@@ -3,7 +3,7 @@ JSON API documentation for kissu.moe. This file contains information on both JSO
 
 ## Kissu-UI / Hazuki API Style
 ### /api/properties/banners.json
-https://kissu.moe/api/properties/banners.json <br/>
+https://kissu.moe/api/properties/banners.json alt. https://kissu.moe/api/properties/sfw-banners.json <br/>
 A list of all the banners submitted to banners.kissu.moe.
 - ARRAY :: Array containing all the banners
   - STRING url :: The URL which clicking on the image goes to. Ignorable on small banners.
