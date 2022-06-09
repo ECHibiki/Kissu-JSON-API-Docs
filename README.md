@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D5D5W2P)
 # Kissu-JSON-API-Docs
 JSON API documentation for kissu.moe. This file contains information on both JSON created for the Kissu-UI (done on the Hazuki API engine) and the Vichan-UI. Documentation provides a link to an example file and then explains the information within. Information within could be changed at any time.
 
